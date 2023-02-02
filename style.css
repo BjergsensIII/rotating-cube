@@ -1,0 +1,73 @@
+body{
+    background-color: black;
+}
+.cube {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    margin: 100px;
+    transform-style: preserve-3d;
+    animation:spin 10s infinite;
+    
+  }
+  
+  .face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .front {
+    transform: translateZ(100px);
+    background-color: red;
+  }
+  
+  .back {
+    transform: rotateY(180deg) translateZ(100px);
+    background-color: blue;
+  }
+  
+  .right {
+    transform: rotateY(90deg) translateZ(100px);
+    background-color: green;
+  }
+  
+  .left {
+    transform: rotateY(-90deg) translateZ(100px);
+    background-color: yellow;
+  }
+  
+  .top {
+    transform: rotateX(90deg) translateZ(100px);
+    background-color: pink;
+  }
+  
+  .bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+    background-color: orange;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotateX(-360deg) rotateY(360deg);
+    }
+    to {
+      transform: rotateX(360deg) rotateY(-360deg);
+    }
+    from {
+        transform: rotateX(100deg) rotateY(0deg);
+      }
+      to {
+        transform: rotateX(360deg) rotateY(-100deg);
+      }
+  }
+  
+  
